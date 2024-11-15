@@ -2,18 +2,14 @@
 
 
  
- <table  style="border-collapse: collapse; border: none;">
-  <tr>
-    <td style="padding: 10px;border: none"> <img src="./screenshots/Screenshot_1730208431.png" alt="image screenshot" width="300" height="600"></td>
-    <td style="padding: 10px;border: none"> <img src="./screenshots/Screenshot_1730208448.png" alt="image screenshot" width="300" height="600">
-</td>
-  </tr>
-  <tr>
-    <td style="padding: 10px;border: none"> <img src="./screenshots/Screenshot_1730208458.png" alt="image screenshot" width="300" height="600"></td>
-    <td style="padding: 10px;border: none"> <img src="./screenshots/Screenshot_1730208443.png" alt="image screenshot" width="300" height="600"></td>
  
-  </tr>
-</table>
+
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+  <div style="flex: 1 1 45%;"> <img src="./screenshots/Screenshot_1730208431.png" alt="image screenshot" width="300" height="600"></div>
+  <div style="flex: 1 1 45%;"><img src="./screenshots/Screenshot_1730208448.png" alt="image screenshot" width="300" height="600"></div>
+  <div style="flex: 1 1 45%;"><img src="./screenshots/Screenshot_1730208458.png" alt="image screenshot" width="300" height="600"></div>
+  <div style="flex: 1 1 45%;"> <img src="./screenshots/Screenshot_1730208443.png" alt="image screenshot" width="300" height="600"></div>
+</div>
  
 
 ## Getting Started
