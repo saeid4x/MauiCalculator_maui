@@ -2,15 +2,15 @@
 
 
  
- <table>
+ <table  style="border-collapse: collapse; border: none;">
   <tr>
-    <td> <img src="./screenshots/Screenshot_1730208431.png" alt="image screenshot" width="300" height="500"></td>
-    <td> <img src="./screenshots/Screenshot_1730208448.png" alt="image screenshot" width="300" height="500">
+    <td style="padding: 10px;border: none"> <img src="./screenshots/Screenshot_1730208431.png" alt="image screenshot" width="300" height="600"></td>
+    <td style="padding: 10px;border: none"> <img src="./screenshots/Screenshot_1730208448.png" alt="image screenshot" width="300" height="600">
 </td>
   </tr>
   <tr>
-    <td> <img src="./screenshots/Screenshot_1730208458.png" alt="image screenshot" width="300" height="500"></td>
-    <td> <img src="./screenshots/Screenshot_1730208443.png" alt="image screenshot" width="300" height="500"></td>
+    <td style="padding: 10px;border: none"> <img src="./screenshots/Screenshot_1730208458.png" alt="image screenshot" width="300" height="600"></td>
+    <td style="padding: 10px;border: none"> <img src="./screenshots/Screenshot_1730208443.png" alt="image screenshot" width="300" height="600"></td>
  
   </tr>
 </table>
