@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalculatorDemo2.Resources.Styles.MycalculatorDictionary">
+
+    <Style TargetType="Editor" >
+        <Setter Property="FlowDirection" Value="RightToLeft" />
+        <Setter Property="Placeholder" Value="تایپ کنید..." />
+        <Setter Property="PlaceholderColor" Value="LightGray" />
+        <Setter Property="WidthRequest" Value="370" />
+        <Setter Property="Margin" Value="0,20,0,0" />
+        <Setter Property="FontSize" Value="20" />
+    </Style>
+
+    <Style TargetType="Button" Class="btnCalculator">
+        <Setter Property="FontSize" Value="26" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="BackgroundColor" Value="BlueViolet" />
+        <Setter Property="CornerRadius" Value="20" />
+        <Setter Property="TextColor" Value="White" />
+    </Style>
+
+    <Style TargetType="Frame" Class="tabFrame">
+        <Setter Property="BackgroundColor" Value="#CADCE8" />
+        <Setter Property="WidthRequest" Value="380" />
+        <Setter Property="HeightRequest" Value="70" />
+        <Setter Property="Margin" Value="0,0,0,20" />
+        <Setter Property="CornerRadius" Value="20" />
+        <Setter Property="BorderColor" Value="Transparent" />
+    </Style>
+
+    
+
+</ResourceDictionary>

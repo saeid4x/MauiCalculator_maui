@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:utility="clr-namespace:CalculatorDemo2.Utilities"
+             x:Class="CalculatorDemo2.Pages.AboutApp"
+             Title=""
+               BackgroundColor="#F0F0F0"
+             >
+
+    <Grid RowDefinitions="0.08* , 0.9*, 0.1*">
+
+        <Label 
+            Text="حسابگر"
+            FontSize="30"
+            FontAttributes="Bold"
+            VerticalOptions="Center"
+          HorizontalOptions="Center"
+            Margin="0,10,0,0"
+            FontFamily="manshoor_extrabold"
+            />
+
+        <VerticalStackLayout Grid.Row="1">
+
+            <Frame 
+                CornerRadius="20" 
+                WidthRequest="300"
+                Margin="0,50,0,0"
+                >
+                <Image
+                    Source="calculator_person1"
+                    />
+            </Frame>
+
+            <Label
+               Text="ماشین حساب هوشمند"
+                FontSize="30"
+                FontAttributes="Bold"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                FlowDirection="RightToLeft"
+                Margin="0,10,0,0"
+                FontFamily="manshoor_extrabold"
+                />
+
+            <Label 
+               Text="ماشین حساب هوشمند ما به شما کمک می‌کند تا با سرعت و دقت، محاسبات خود را انجام دهید. چه در حال انجام تکالیف مدرسه باشید یا در حال برنامه‌ریزی مالی شخصی، با رابط کاربری ساده و امکانات متنوع، تجربه‌ای آسان و لذت‌بخش از محاسبات را برای شما فراهم می‌کند. بیایید با هم به دنیای بدون نگرانی از محاسبات وارد شویم!"
+
+            
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Margin="0,15,10,0"
+                Padding="15,0,15,0"
+                FontSize="17"
+                FontFamily="kalameh_semibold"
+                HorizontalTextAlignment="Center"
+               
+                />
+
+
+
+        </VerticalStackLayout>
+
+
+        <!--#region tab -->
+
+
+        <Frame Grid.Row="3" 
+                  StyleClass="tabFrame"
+                   >
+
+            <Grid RowDefinitions="*" ColumnDefinitions="*,*,*">
+
+                <Image Grid.Row="0" Grid.Column="0"  >
+                    <Image.Source>
+                        <FontImageSource 
+                        FontFamily="Fontello"
+                        Color="White"
+                        Glyph="{x:Static utility:IconFont.calculator}"
+                        />
+                    </Image.Source>
+
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnCalculatorTapped" />
+                    </Image.GestureRecognizers>
+
+
+                </Image>
+
+                <Image Grid.Row="0" Grid.Column="1">
+                    <Image.Source>
+                        <FontImageSource 
+                        FontFamily="Fontello"
+                      Color="blue"
+                        Glyph="{x:Static utility:IconFont.aboutApp}"
+                        />
+                    </Image.Source>
+
+
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="onAboutAppTapped" />
+                    </Image.GestureRecognizers>
+                </Image>
+
+
+                <Image Grid.Row="0" Grid.Column="2">
+                    <Image.Source>
+                        <FontImageSource 
+                        FontFamily="Fontello"
+                        Color="White"
+                        Glyph="{x:Static utility:IconFont.email}"
+                        />
+                    </Image.Source>
+
+
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnEmailTapped" />
+                    </Image.GestureRecognizers>
+
+
+                </Image>
+            </Grid>
+
+        </Frame>
+
+
+        <!--#endregion-->
+
+
+
+    </Grid>
+</ContentPage>

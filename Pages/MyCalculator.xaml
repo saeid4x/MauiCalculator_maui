@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:utility="clr-namespace:CalculatorDemo2.Utilities"
+             x:Class="CalculatorDemo2.Pages.MyCalculator"
+             Title=""
+             BackgroundColor="#D0E7F8"
+             >
+ 
+    <Grid
+        RowDefinitions="0.09*,0.3*,0.6*,0.1*"        
+        >
+
+        <!--#region name of app -->
+            <Label 
+                Grid.Row="0"            
+                Text="حسابگر"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                FontAttributes="Bold"
+                FontSize="30"
+                Margin="0,7,0,0"
+                FontFamily="manshoor_extrabold"
+                />              
+        <!--#endregion-->
+
+        <!--#region Operation -->
+
+        <VerticalStackLayout
+            Grid.Row="1"
+                Padding="15"  
+            
+                >
+            <Label
+                    x:Name="lblOperation"
+                    Text="{Binding Formula}"
+                    FontSize="25"
+                Margin="0,10,0,0"
+                    HorizontalTextAlignment="Start"
+                    />
+
+            <Label
+                    x:Name="lblResult"
+                    Text="{Binding Result}"
+                    FontSize="50"
+                FontAttributes="Bold"
+                    HorizontalTextAlignment="Start"
+                Margin="0,50,0,0"
+                
+                    />
+        </VerticalStackLayout>
+
+        <!--#endregion-->
+
+        <!--#region buttons -->
+        
+         <Grid
+             Grid.Row="2"
+            RowDefinitions="*,*,*,*,*"
+            ColumnDefinitions="*,*,*,*"
+             RowSpacing="15"
+             ColumnSpacing="15"
+             Padding="10"
+             Margin="0,0,0,15"
+            >
+
+            <!--#region row 1 -->
+            <Button
+                Text="C"
+                Command="{Binding ResetCommand}"
+                StyleClass="btnCalculator"
+                BackgroundColor="Red"
+                />
+
+            <Button                
+                Grid.Column="1"
+                Text="⌫"
+                Command="{Binding BackspaceCommand}"
+                 StyleClass="btnCalculator"
+                />
+
+            <Button
+                Grid.Column="2"
+                Text="%"
+                Command="{Binding OperationCommand}"
+                CommandParameter=" % "
+                    StyleClass="btnCalculator"
+                />
+
+            <Button
+                Grid.Column="3"
+                Text="/"
+                Command="{Binding OperationCommand}"
+                CommandParameter=" / "
+                    StyleClass="btnCalculator"
+                BackgroundColor="Orange"
+                />
+            <!--#endregion-->
+
+            <!--#region row 2 -->
+            <Button 
+                Grid.Row="1"
+                Text="7"
+                Command="{Binding OperationCommand}"
+                CommandParameter="7"
+                    StyleClass="btnCalculator"
+                />
+
+            <Button
+                Grid.Row="1"
+                Grid.Column="1"
+                Text="8"
+                Command="{Binding OperationCommand}"
+                CommandParameter="8"
+                    StyleClass="btnCalculator"
+                />
+
+            <Button 
+                Grid.Row="1"
+                Grid.Column="2"
+                Text="9"
+                Command="{Binding OperationCommand}"
+                CommandParameter="9"
+                    StyleClass="btnCalculator"
+                />
+
+            <Button
+                Grid.Row="1"
+                Grid.Column="3"
+                Text="*"
+                Command="{Binding OperationCommand}"
+                CommandParameter=" * "
+                    StyleClass="btnCalculator"
+                BackgroundColor="Orange"
+                />
+
+            <!--#endregion-->
+
+
+            <!--#region row 3 -->
+            <Button 
+                Grid.Row="2"
+                Grid.Column="0"
+                Text="4"
+                Command="{Binding OperationCommand}"
+                CommandParameter="4"
+                    StyleClass="btnCalculator"
+                /> 
+            
+            <Button 
+                Grid.Row="2"
+                Grid.Column="1"
+                Text="5"
+                Command="{Binding OperationCommand}"
+                CommandParameter="5"
+                    StyleClass="btnCalculator"
+                />  
+            
+            <Button 
+                Grid.Row="2"
+                Grid.Column="2"
+                Text="6"
+                Command="{Binding OperationCommand}"
+                CommandParameter="6"
+                    StyleClass="btnCalculator"
+                />   
+            
+            <Button 
+                Grid.Row="2"
+                Grid.Column="3"
+                Text="-"
+                Command="{Binding OperationCommand}"
+                CommandParameter=" - "
+                    StyleClass="btnCalculator"
+                BackgroundColor="Orange"
+                />
+            <!--#endregion-->
+
+            <!--#region row 4 -->
+
+            <Button 
+                Grid.Row="3"
+                Grid.Column="0"
+                Text="1"
+                Command="{Binding OperationCommand}"
+                CommandParameter="1"
+                    StyleClass="btnCalculator"
+                />
+            
+            
+            <Button 
+                Grid.Row="3"
+                Grid.Column="1"
+                Text="2"
+                Command="{Binding OperationCommand}"
+                CommandParameter="2"
+                    StyleClass="btnCalculator"
+                />
+            <Button 
+                Grid.Row="3"
+                Grid.Column="2"
+                Text="3"
+                Command="{Binding OperationCommand}"
+                CommandParameter="3"
+                    StyleClass="btnCalculator"
+                />
+            <Button 
+                Grid.Row="3"
+                Grid.Column="3"
+                Text="+"
+                Command="{Binding OperationCommand}"
+                CommandParameter=" + "
+                    StyleClass="btnCalculator"
+                BackgroundColor="Orange"
+                />
+            <!--#endregion-->
+
+            <!--#region row 5 -->
+            
+            
+            <Button 
+                  Grid.Row="4"
+                  Grid.Column="0"
+                  Text="0"
+                  Command="{Binding OperationCommand}"
+                  CommandParameter="0"
+                    StyleClass="btnCalculator"
+              />
+              
+            <Button 
+                  Grid.Row="4"
+                  Grid.Column="1"
+                  Text="00"
+                  Command="{Binding OperationCommand}"
+                  CommandParameter="00"
+                    StyleClass="btnCalculator"
+              />
+              
+            <Button 
+                  Grid.Row="4"
+                  Grid.Column="2"
+                  Text="."
+                  Command="{Binding OperationCommand}"
+                  CommandParameter="."
+                    StyleClass="btnCalculator"
+              />
+              
+            <Button 
+                  Grid.Row="4"
+                  Grid.Column="3"
+                  Text="="
+                  Command="{Binding CalculationCommand}"
+                    StyleClass="btnCalculator"
+                BackgroundColor="LightGreen"
+                  
+              />
+            
+            
+            <!--#endregion-->
+
+        </Grid>
+        <!--#endregion-->
+
+        <!--#region tab -->
+        
+            
+            <Frame Grid.Row="3" 
+                   StyleClass="tabFrame"
+                    
+                 
+                   >
+                
+                <Grid RowDefinitions="*" ColumnDefinitions="*,*,*">
+                    
+                    <Image Grid.Row="0" Grid.Column="0"   >
+                        <Image.Source>
+                            <FontImageSource 
+                        FontFamily="Fontello"
+                        Color="blue"
+                        Glyph="{x:Static utility:IconFont.calculator}"
+                                                     
+                           
+                        />
+                        </Image.Source>
+
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnCalculatorTapped" />
+                    </Image.GestureRecognizers>
+                        
+                        
+                    </Image>
+
+                <Image Grid.Row="0" Grid.Column="1">
+                        <Image.Source>
+                            <FontImageSource 
+                        FontFamily="Fontello"
+                        Color="White"
+                        Glyph="{x:Static utility:IconFont.aboutApp}"
+                        />
+                        </Image.Source>
+
+
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="onAboutAppTapped" />
+                    </Image.GestureRecognizers>
+                </Image>
+
+
+                <Image Grid.Row="0" Grid.Column="2">
+                    <Image.Source>
+                        <FontImageSource 
+                        FontFamily="Fontello"
+                        Color="White"
+                        Glyph="{x:Static utility:IconFont.email}"
+                        />
+                    </Image.Source>
+
+
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnEmailTapped" />
+                    </Image.GestureRecognizers>
+                    
+                    
+                </Image>
+            </Grid>
+                
+            </Frame>
+               
+        
+        <!--#endregion-->
+
+
+        
+        
+   
+    </Grid>
+   
+</ContentPage>
