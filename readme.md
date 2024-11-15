@@ -2,14 +2,19 @@
 
 
  
+ <table cellspacing="20"   style="border-collapse: collapse; border: none !important;">
+  <tr style="border-collapse: collapse;">
+    <td  > <img src="./screenshots/Screenshot_1730208431.png" alt="image screenshot" width="300" height="600"></td>
+    <td > <img src="./screenshots/Screenshot_1730208448.png" alt="image screenshot" width="300" height="600">
+</td>
+  </tr>
+  <tr>
+    <td   > <img src="./screenshots/Screenshot_1730208458.png" alt="image screenshot" width="300" height="600"></td>
+    <td > <img src="./screenshots/Screenshot_1730208443.png" alt="image screenshot" width="300" height="600"></td>
  
-
-<div style="display: flex; flex-wrap: wrap; gap: 10px;">
-  <div style="flex: 1 1 45%;"> <img src="./screenshots/Screenshot_1730208431.png" alt="image screenshot" width="300" height="600"></div>
-  <div style="flex: 1 1 45%;"><img src="./screenshots/Screenshot_1730208448.png" alt="image screenshot" width="300" height="600"></div>
-  <div style="flex: 1 1 45%;"><img src="./screenshots/Screenshot_1730208458.png" alt="image screenshot" width="300" height="600"></div>
-  <div style="flex: 1 1 45%;"> <img src="./screenshots/Screenshot_1730208443.png" alt="image screenshot" width="300" height="600"></div>
-</div>
+  </tr>
+</table>
+ 
  
 
 ## Getting Started
